@@ -37,7 +37,7 @@ class Soldier(pygame.sprite.Sprite):
 		scale: 画像のスケール
 		"""
 		"""
-		Q2.プレイヤーの画像を敵の画像に変えてみましょう
+		Q2.プレイヤー兵士の画像を敵の画像に変えてください
 		"""
 		# 親クラスの初期化
 		pygame.sprite.Sprite.__init__(self)
