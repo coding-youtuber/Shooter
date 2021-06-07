@@ -31,6 +31,9 @@ moving_left = False
 moving_right = False
 
 
+"""
+Q1. 背景色を青色に変えてください
+"""
 # 背景色のRGB値。Red,Blue,Green
 BG = (144, 201, 120)
 
@@ -118,6 +121,9 @@ class Soldier(pygame.sprite.Sprite):
 
 
 
+"""
+Q2. 兵士の移動スピードを速くしてください
+"""
 # 兵士クラスからインスタンスを生成。プレイヤーとする。
 player = Soldier('player', 200, 200, 3, 5)
 # 兵士クラスからインスタンスを生成。敵とする。
@@ -145,6 +151,13 @@ while run:
 	player.move(moving_left, moving_right)
 
 
+	"""
+	Q3.左右キーでも左右の移動ができるようにしてください
+	左キーは「K_LEFT」
+	右キーは「K_RIGHT」とします
+
+	https://www.pygame.org/docs/ref/key.html
+	"""
 	# イベント処理
 	for event in pygame.event.get():
 		#終了イベント
