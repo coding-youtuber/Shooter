@@ -35,7 +35,9 @@ moving_right = False
 Q1. 背景色を青色に変えてください
 """
 # 背景色のRGB値。Red,Green,Blue
-BG = (144, 201, 120)
+# BG = (144, 201, 120)
+# Q1の解答
+BG = (0, 0, 255)
 
 def draw_bg():
 	"""
@@ -125,7 +127,9 @@ class Soldier(pygame.sprite.Sprite):
 Q2. 兵士の移動スピードを速くしてください
 """
 # 兵士クラスからインスタンスを生成。プレイヤーとする。
-player = Soldier('player', 200, 200, 3, 5)
+# player = Soldier('player', 200, 200, 3, 5)
+# Q2の解答。引数speedの値を5より大きくする
+player = Soldier('player', 200, 200, 3, 20)
 # 兵士クラスからインスタンスを生成。敵とする。
 enemy = Soldier('enemy', 400, 200, 3, 5)
 
@@ -166,12 +170,12 @@ while run:
 			run = False
 		# あるキーを押す
 		if event.type == pygame.KEYDOWN:
-			# aキーを押す
-			if event.key == pygame.K_a:
+			# Q3の解答。aキーを押す or 左キーを押す
+			if event.key == pygame.K_a or event.key == pygame.K_LEFT:
 				# 左移動フラグをTrue
 				moving_left = True
-			# dキーを押す
-			if event.key == pygame.K_d:
+			# Q3の解答。dキーを押す or 右キーを押す
+			if event.key == pygame.K_d or event.key == pygame.K_RIGHT:
 				# 右移動フラグをTrue
 				moving_right = True
 			#ESCキーを押すとゲームが終了する
@@ -182,12 +186,12 @@ while run:
 
 		# キーを離した
 		if event.type == pygame.KEYUP:
-			# aキーを離した
-			if event.key == pygame.K_a:
+			# Q3の解答。aキーを離した or 左キーを離した
+			if event.key == pygame.K_a or event.key == pygame.K_LEFT:
 				# 左移動フラグをFalse
 				moving_left = False
-			# dキーを離した
-			if event.key == pygame.K_d:
+			# Q3の解答。dキーを離した or 右キーを離した
+			if event.key == pygame.K_d or event.key == pygame.K_RIGHT:
 				# 右移動フラグをFalse
 				moving_right = False
 
