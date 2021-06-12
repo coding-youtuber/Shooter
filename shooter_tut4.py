@@ -223,6 +223,9 @@ class Soldier(pygame.sprite.Sprite):
 		"""
 		弾を撃つ
 		"""
+		"""
+		Q3.
+		"""
 		# クールダウンが0、弾薬がある
 		if self.shoot_cooldown == 0 and self.ammo > 0:
 			# クールダウンを20
@@ -298,6 +301,9 @@ class Soldier(pygame.sprite.Sprite):
 
 
 
+"""
+Q1.弾のスピードを速くしてください
+"""
 class Bullet(pygame.sprite.Sprite):
 	"""
 	弾丸クラス
@@ -340,6 +346,10 @@ class Bullet(pygame.sprite.Sprite):
 				player.health -= 5
 				# 弾丸クラスを削除
 				self.kill()
+
+		"""
+		Q2.敵の兵士を弾丸一発で倒せるようにしてください
+		"""
 		# 敵との衝突判定
 		if pygame.sprite.spritecollide(enemy, bullet_group, False):
 			# 敵が生きている

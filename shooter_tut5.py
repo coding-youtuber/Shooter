@@ -1,5 +1,7 @@
 """
 Part5
+
+手榴弾を投げる
 """
 # pygameを読み込む
 import pygame

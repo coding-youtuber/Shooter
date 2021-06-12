@@ -28,6 +28,9 @@ clock = pygame.time.Clock()
 #FPS=frame per second。1秒間に何回フレームを描画するのか。60だと滑らか。
 FPS = 60
 
+"""
+Q1.重力を弱めてください
+"""
 #重力の大きさ。ジャンプした時に落ちる力。
 GRAVITY = 0.75
 
@@ -144,6 +147,10 @@ class Soldier(pygame.sprite.Sprite):
 			# 進行方向フラグは右なので1
 			self.direction = 1
 
+
+		"""
+		Q2.兵士のジャンプ力を上げてください
+		"""
 		#ジャンプ
 		# ジャンプ中かつ空中フラグはまだFalse
 		if self.jump == True and self.in_air == False:
@@ -177,6 +184,9 @@ class Soldier(pygame.sprite.Sprite):
 		# Y軸方向の微小な移動距離を更新.単位時間なので距離に速度を足すことができる
 		dy += self.vel_y
 
+		"""
+		Q3.兵士が床の下に行けるようにしてください	
+		"""
 		# 床との衝突判定
 		if self.rect.bottom + dy > 300:
 			dy = 300 - self.rect.bottom
