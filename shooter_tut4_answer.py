@@ -232,6 +232,7 @@ class Soldier(pygame.sprite.Sprite):
 			# クールダウン変数が0より大きい時は発射できない。
 			# 短い間隔で連射できないようになっている
 			self.shoot_cooldown = 20
+			# self.shoot_cooldown = 2
 			# 弾丸クラスからインスタンスを生成
 			bullet = Bullet(self.rect.centerx + (0.6 * self.rect.size[0] * self.direction), self.rect.centery, self.direction)
 			# 弾丸グループに追加
@@ -320,6 +321,7 @@ class Bullet(pygame.sprite.Sprite):
 		pygame.sprite.Sprite.__init__(self)
 		# 弾丸のスピード
 		self.speed = 10
+		# self.speed = 50
 		# 弾丸の画像
 		self.image = bullet_img
 		# 画像を囲む四角形を取得
@@ -358,6 +360,7 @@ class Bullet(pygame.sprite.Sprite):
 			if enemy.alive:
 				# 体力が減少
 				enemy.health -= 25
+				# enemy.health -= 100
 				# 弾丸クラスを削除
 				self.kill()
 
